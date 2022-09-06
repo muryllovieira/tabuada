@@ -6,22 +6,29 @@ public class Tabuada {
 	public int minimoMultiplicador;
 	public int maximoMultiplicador;
 	
-	public void getNumeroMultiplicador() {
+	public String[] getTabuada() {
 		
-	}
-	public void getMaximoMultiplicador() {
+		int tamanho = maximoMultiplicador - minimoMultiplicador + 1;
+		String[] tabuada = new String[tamanho];
 		
-	}
-	public void getMinimoMultiplicador() {
+		int i = 0;
 		
+		while(i < tamanho) {
+			
+			int resultadoConta = multiplicando * minimoMultiplicador;
+			
+			String resultado = multiplicando + " X " + minimoMultiplicador + " = " + resultadoConta;
+			
+			tabuada[i] = resultado;
+			
+			i++;
+			minimoMultiplicador++;
+			
+		}
+		
+		return tabuada;
 	}
 	
-	
-	
-	
-	
-	
-	
-	
+
 	
 }
