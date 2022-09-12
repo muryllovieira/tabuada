@@ -117,24 +117,6 @@ public class FrameTabuada {
 		listLista.setFont(fonteDaLista);
 		listLista.setBorder(new LineBorder(Color.BLUE));
 
-
-		buttonLimpar.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				if (e.getSource() == buttonLimpar)
-					;
-
-				textFieldMultiplicando.setText(null);
-				textFieldminimoMultiplicador.setText(null);
-				textFieldmaximoMultiplicador.setText(null);
-
-				DefaultListModel<String> lista = new DefaultListModel<>();
-				listLista.setModel(lista);
-
-			}
-		});
-
 		painel.add(labelTabuada);
 		painel.add(labelTexto);
 		painel.add(icon);
@@ -187,7 +169,21 @@ public class FrameTabuada {
 					}
 				}
 				
-				System.out.println("Saiu!!");
+				buttonLimpar.addActionListener(new ActionListener() {
+
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						if (e.getSource() == buttonLimpar);
+
+						textFieldMultiplicando.setText(null);
+						textFieldminimoMultiplicador.setText(null);
+						textFieldmaximoMultiplicador.setText(null);
+
+						DefaultListModel<String> lista = new DefaultListModel<>();
+						listLista.setModel(lista);
+
+					}
+				});
 
 
 			}
